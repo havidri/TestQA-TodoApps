@@ -1,0 +1,1137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.1 on win32)" generated="20220314 11:58:39.223" rpa="false" schemaversion="2">
+<suite id="s1" name="Todo List-App" source="D:\DOJOBOX\Web Automation\TestQA-TodoApps\todo_list-app.robot">
+<kw name="Open Browser Chrome" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220314 11:58:40.268" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220314 11:58:40.267" endtime="20220314 11:58:42.615"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220314 11:58:42.616" endtime="20220314 11:58:42.747"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:40.266" endtime="20220314 11:58:42.748"/>
+</kw>
+<test id="s1-t1" name="Menampilkan halaman utama">
+<kw name="Buka halaman website todo list app" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://todo-4769a.web.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 11:58:42.760" level="INFO">Opening url 'https://todo-4769a.web.app/'</msg>
+<status status="PASS" starttime="20220314 11:58:42.758" endtime="20220314 11:58:44.687"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:42.756" endtime="20220314 11:58:44.689"/>
+</kw>
+<kw name="Berhsil menampilkan header title" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:44.978" level="INFO">Element '//*[@data-cy="header-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:44.694" endtime="20220314 11:58:44.979"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<arg>TO DO LIST APP</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:58:45.084" level="INFO">Element '//*[@data-cy="header-title"]' contains text 'TO DO LIST APP'.</msg>
+<status status="PASS" starttime="20220314 11:58:44.980" endtime="20220314 11:58:45.084"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:44.691" endtime="20220314 11:58:45.085"/>
+</kw>
+<kw name="Berhasil menampilkan title activity" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:45.184" level="INFO">Element '//*[@data-cy="activity-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:45.088" endtime="20220314 11:58:45.184"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<arg>Activity</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:58:45.252" level="INFO">Element '//*[@data-cy="activity-title"]' contains text 'Activity'.</msg>
+<status status="PASS" starttime="20220314 11:58:45.185" endtime="20220314 11:58:45.252"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:45.086" endtime="20220314 11:58:45.253"/>
+</kw>
+<kw name="Berhasil menampilkan button tambah" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${AddButtonVisible}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:45.329" level="INFO">Element '//*[@data-cy="activity-add-button"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:45.255" endtime="20220314 11:58:45.330"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:45.254" endtime="20220314 11:58:45.331"/>
+</kw>
+<doc>Test verifikasi menampilkan data utama</doc>
+<tag>Fungsional, Card Acivity</tag>
+<status status="PASS" starttime="20220314 11:58:42.749" endtime="20220314 11:58:45.332"/>
+</test>
+<test id="s1-t2" name="Menambahkan data activity">
+<kw name="Buka halaman website todo list app" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://todo-4769a.web.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 11:58:45.340" level="INFO">Opening url 'https://todo-4769a.web.app/'</msg>
+<status status="PASS" starttime="20220314 11:58:45.339" endtime="20220314 11:58:45.625"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:45.338" endtime="20220314 11:58:45.627"/>
+</kw>
+<kw name="Berhsil menampilkan header title" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:45.813" level="INFO">Element '//*[@data-cy="header-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:45.631" endtime="20220314 11:58:45.814"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<arg>TO DO LIST APP</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:58:45.901" level="INFO">Element '//*[@data-cy="header-title"]' contains text 'TO DO LIST APP'.</msg>
+<status status="PASS" starttime="20220314 11:58:45.814" endtime="20220314 11:58:45.901"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:45.629" endtime="20220314 11:58:45.902"/>
+</kw>
+<kw name="Berhasil menampilkan title activity" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:45.965" level="INFO">Element '//*[@data-cy="activity-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:45.904" endtime="20220314 11:58:45.966"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<arg>Activity</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:58:46.039" level="INFO">Element '//*[@data-cy="activity-title"]' contains text 'Activity'.</msg>
+<status status="PASS" starttime="20220314 11:58:45.966" endtime="20220314 11:58:46.040"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:45.903" endtime="20220314 11:58:46.041"/>
+</kw>
+<kw name="Klik button tambah activity" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${AddButtonVisible}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:58:46.043" endtime="20220314 11:58:46.101"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddButtonVisible}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:58:46.103" level="INFO">Clicking element '//*[@data-cy="activity-add-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:58:46.102" endtime="20220314 11:58:46.234"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:46.042" endtime="20220314 11:58:46.235"/>
+</kw>
+<kw name="Berhasil menambah data baru new activity" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${NewActivityisVisible}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:58:46.237" endtime="20220314 11:58:46.327"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 11:58:49.329" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220314 11:58:46.328" endtime="20220314 11:58:49.329"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${NewActivityisVisible}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:49.560" level="INFO">Element '//*[@data-cy="activity-item-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:49.330" endtime="20220314 11:58:49.561"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:46.236" endtime="20220314 11:58:49.562"/>
+</kw>
+<doc>Test verifikasi menambah data card activity</doc>
+<tag>Fungsional, Card Acivity</tag>
+<status status="PASS" starttime="20220314 11:58:45.336" endtime="20220314 11:58:49.923"/>
+</test>
+<test id="s1-t3" name="Menghapus activity">
+<kw name="Buka halaman website todo list app" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://todo-4769a.web.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 11:58:50.148" level="INFO">Opening url 'https://todo-4769a.web.app/'</msg>
+<status status="PASS" starttime="20220314 11:58:50.147" endtime="20220314 11:58:50.611"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:50.145" endtime="20220314 11:58:50.612"/>
+</kw>
+<kw name="Berhsil menampilkan header title" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:50.892" level="INFO">Element '//*[@data-cy="header-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:50.615" endtime="20220314 11:58:50.893"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<arg>TO DO LIST APP</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:58:50.990" level="INFO">Element '//*[@data-cy="header-title"]' contains text 'TO DO LIST APP'.</msg>
+<status status="PASS" starttime="20220314 11:58:50.893" endtime="20220314 11:58:50.990"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:50.613" endtime="20220314 11:58:50.991"/>
+</kw>
+<kw name="Berhasil menampilkan title activity" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:51.068" level="INFO">Element '//*[@data-cy="activity-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:50.994" endtime="20220314 11:58:51.069"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<arg>Activity</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:58:51.143" level="INFO">Element '//*[@data-cy="activity-title"]' contains text 'Activity'.</msg>
+<status status="PASS" starttime="20220314 11:58:51.069" endtime="20220314 11:58:51.143"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:50.992" endtime="20220314 11:58:51.144"/>
+</kw>
+<kw name="Klik button tambah activity" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${AddButtonVisible}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:58:51.147" endtime="20220314 11:58:51.209"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddButtonVisible}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:58:51.212" level="INFO">Clicking element '//*[@data-cy="activity-add-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:58:51.210" endtime="20220314 11:58:51.345"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:51.145" endtime="20220314 11:58:51.346"/>
+</kw>
+<kw name="Berhasil menambah data baru new activity" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${NewActivityisVisible}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:58:51.349" endtime="20220314 11:58:51.420"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 11:58:54.422" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220314 11:58:51.421" endtime="20220314 11:58:54.422"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${NewActivityisVisible}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:54.490" level="INFO">Element '//*[@data-cy="activity-item-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:54.423" endtime="20220314 11:58:54.491"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:51.347" endtime="20220314 11:58:54.492"/>
+</kw>
+<kw name="Klik icon hapus" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DeleteActivity}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:58:54.494" endtime="20220314 11:58:54.592"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DeleteActivity}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:58:54.594" level="INFO">Clicking element '//*[@data-cy="activity-item-delete-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:58:54.593" endtime="20220314 11:58:54.763"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:54.493" endtime="20220314 11:58:54.764"/>
+</kw>
+<kw name="Menmapilkan popup konfirmasi hapus data" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PopupDelete}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:58:54.768" endtime="20220314 11:58:54.857"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${PopupDelete}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:54.915" level="INFO">Element '//*[@data-cy="modal-delete-confirm-button"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:54.857" endtime="20220314 11:58:54.915"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:54.766" endtime="20220314 11:58:54.916"/>
+</kw>
+<kw name="Klik tombol hapus" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BtnDelete}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:58:54.919" level="INFO">Clicking element '//*[@data-cy="modal-delete-confirm-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:58:54.918" endtime="20220314 11:58:55.086"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:54.917" endtime="20220314 11:58:55.087"/>
+</kw>
+<kw name="Berhasil menghapus data activity" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SuccessDelete}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:58:55.091" endtime="20220314 11:58:55.172"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${SuccessDelete}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:55.231" level="INFO">Element '//*[@data-cy="modal-information-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:55.173" endtime="20220314 11:58:55.231"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:55.089" endtime="20220314 11:58:55.232"/>
+</kw>
+<doc>Test verifikasi menghapus data card activity</doc>
+<tag>Fungsional, Card Acivity</tag>
+<status status="PASS" starttime="20220314 11:58:50.140" endtime="20220314 11:58:55.234"/>
+</test>
+<test id="s1-t4" name="Menampilkan detail activity">
+<kw name="Buka halaman website todo list app" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://todo-4769a.web.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 11:58:55.242" level="INFO">Opening url 'https://todo-4769a.web.app/'</msg>
+<status status="PASS" starttime="20220314 11:58:55.241" endtime="20220314 11:58:55.737"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:55.240" endtime="20220314 11:58:55.738"/>
+</kw>
+<kw name="Berhsil menampilkan header title" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:55.811" level="INFO">Element '//*[@data-cy="header-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:55.742" endtime="20220314 11:58:55.812"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<arg>TO DO LIST APP</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:58:56.016" level="INFO">Element '//*[@data-cy="header-title"]' contains text 'TO DO LIST APP'.</msg>
+<status status="PASS" starttime="20220314 11:58:55.812" endtime="20220314 11:58:56.017"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:55.740" endtime="20220314 11:58:56.020"/>
+</kw>
+<kw name="Berhasil menampilkan title activity" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:56.107" level="INFO">Element '//*[@data-cy="activity-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:56.024" endtime="20220314 11:58:56.107"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<arg>Activity</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:58:56.179" level="INFO">Element '//*[@data-cy="activity-title"]' contains text 'Activity'.</msg>
+<status status="PASS" starttime="20220314 11:58:56.107" endtime="20220314 11:58:56.180"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:56.022" endtime="20220314 11:58:56.181"/>
+</kw>
+<kw name="Klik activity card yang sudah dibuat" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ActivityAction}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:58:56.183" endtime="20220314 11:58:56.262"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ActivityAction}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:58:56.264" level="INFO">Clicking element '(//*[@data-cy="activity-item"])[1]'.</msg>
+<status status="PASS" starttime="20220314 11:58:56.263" endtime="20220314 11:58:56.393"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:56.182" endtime="20220314 11:58:56.394"/>
+</kw>
+<kw name="Menampilkan empty state" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EmptyState}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:58:56.398" endtime="20220314 11:58:56.740"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${EmptyState}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:56.793" level="INFO">Element '//*[@data-cy="todo-empty-state"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:56.740" endtime="20220314 11:58:56.794"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:56.396" endtime="20220314 11:58:56.794"/>
+</kw>
+<doc>Test verifikasi menampilkan detail card activity</doc>
+<tag>Fungsional, Detail Card Acivity</tag>
+<status status="PASS" starttime="20220314 11:58:55.237" endtime="20220314 11:58:56.795"/>
+</test>
+<test id="s1-t5" name="Mengganti title todo">
+<kw name="Buka halaman website todo list app" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://todo-4769a.web.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 11:58:56.803" level="INFO">Opening url 'https://todo-4769a.web.app/'</msg>
+<status status="PASS" starttime="20220314 11:58:56.802" endtime="20220314 11:58:56.958"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:56.801" endtime="20220314 11:58:56.961"/>
+</kw>
+<kw name="Berhsil menampilkan header title" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:57.142" level="INFO">Element '//*[@data-cy="header-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:56.965" endtime="20220314 11:58:57.143"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<arg>TO DO LIST APP</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:58:57.230" level="INFO">Element '//*[@data-cy="header-title"]' contains text 'TO DO LIST APP'.</msg>
+<status status="PASS" starttime="20220314 11:58:57.144" endtime="20220314 11:58:57.231"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:56.963" endtime="20220314 11:58:57.231"/>
+</kw>
+<kw name="Berhasil menampilkan title activity" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:58:57.294" level="INFO">Element '//*[@data-cy="activity-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:58:57.234" endtime="20220314 11:58:57.294"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<arg>Activity</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:58:57.364" level="INFO">Element '//*[@data-cy="activity-title"]' contains text 'Activity'.</msg>
+<status status="PASS" starttime="20220314 11:58:57.295" endtime="20220314 11:58:57.364"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:57.233" endtime="20220314 11:58:57.365"/>
+</kw>
+<kw name="Klik activity card yang sudah dibuat" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ActivityAction}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:58:57.367" endtime="20220314 11:58:57.425"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ActivityAction}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:58:57.427" level="INFO">Clicking element '(//*[@data-cy="activity-item"])[1]'.</msg>
+<status status="PASS" starttime="20220314 11:58:57.426" endtime="20220314 11:58:57.568"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:57.366" endtime="20220314 11:58:57.569"/>
+</kw>
+<kw name="Klik icon edit title" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BtnEditTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:58:57.574" endtime="20220314 11:58:57.701"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BtnEditTitle}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:58:57.702" level="INFO">Clicking element '//*[@data-cy="todo-title-edit-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:58:57.701" endtime="20220314 11:58:57.842"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 11:59:07.844" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220314 11:58:57.843" endtime="20220314 11:59:07.844"/>
+</kw>
+<status status="PASS" starttime="20220314 11:58:57.572" endtime="20220314 11:59:07.845"/>
+</kw>
+<kw name="Masukkan nama title baru" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${InputTitle}</arg>
+<arg>Title Baru</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:07.848" level="INFO">Typing text 'Title Baru' into text field '//*[@value="New Activity"]'.</msg>
+<msg timestamp="20220314 11:59:08.356" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220314 11:59:08.367" level="FAIL">Element with locator '//*[@value="New Activity"]' not found.</msg>
+<status status="FAIL" starttime="20220314 11:59:07.847" endtime="20220314 11:59:08.367"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220314 11:59:08.368" endtime="20220314 11:59:08.368"/>
+</kw>
+<status status="FAIL" starttime="20220314 11:59:07.846" endtime="20220314 11:59:08.370"/>
+</kw>
+<kw name="Klik button back" library="resource">
+<status status="NOT RUN" starttime="20220314 11:59:08.372" endtime="20220314 11:59:08.372"/>
+</kw>
+<doc>Test verifikasi mengubah title card</doc>
+<tag>Fungsional, Detail Card Acivity</tag>
+<status status="FAIL" starttime="20220314 11:58:56.799" endtime="20220314 11:59:08.373">Element with locator '//*[@value="New Activity"]' not found.</status>
+</test>
+<test id="s1-t6" name="Menambahkan beberapa item prioritas todo">
+<kw name="Buka halaman website todo list app" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://todo-4769a.web.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 11:59:08.382" level="INFO">Opening url 'https://todo-4769a.web.app/'</msg>
+<status status="PASS" starttime="20220314 11:59:08.381" endtime="20220314 11:59:08.577"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:08.380" endtime="20220314 11:59:08.578"/>
+</kw>
+<kw name="Berhsil menampilkan header title" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:59:08.813" level="INFO">Element '//*[@data-cy="header-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:59:08.585" endtime="20220314 11:59:08.814"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<arg>TO DO LIST APP</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:59:08.898" level="INFO">Element '//*[@data-cy="header-title"]' contains text 'TO DO LIST APP'.</msg>
+<status status="PASS" starttime="20220314 11:59:08.815" endtime="20220314 11:59:08.898"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:08.583" endtime="20220314 11:59:08.899"/>
+</kw>
+<kw name="Berhasil menampilkan title activity" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:59:08.974" level="INFO">Element '//*[@data-cy="activity-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:59:08.902" endtime="20220314 11:59:08.974"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<arg>Activity</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:59:09.043" level="INFO">Element '//*[@data-cy="activity-title"]' contains text 'Activity'.</msg>
+<status status="PASS" starttime="20220314 11:59:08.975" endtime="20220314 11:59:09.043"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:08.900" endtime="20220314 11:59:09.044"/>
+</kw>
+<kw name="Klik activity card yang sudah dibuat" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ActivityAction}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:09.046" endtime="20220314 11:59:09.123"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ActivityAction}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:09.125" level="INFO">Clicking element '(//*[@data-cy="activity-item"])[1]'.</msg>
+<status status="PASS" starttime="20220314 11:59:09.124" endtime="20220314 11:59:09.257"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:09.045" endtime="20220314 11:59:09.258"/>
+</kw>
+<kw name="Menampilkan empty state" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EmptyState}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:09.260" endtime="20220314 11:59:09.598"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${EmptyState}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:59:09.653" level="INFO">Element '//*[@data-cy="todo-empty-state"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:59:09.599" endtime="20220314 11:59:09.653"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:09.259" endtime="20220314 11:59:09.654"/>
+</kw>
+<kw name="Klik button tambah items" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddListItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:09.658" level="INFO">Clicking element '//*[@data-cy="todo-add-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:09.656" endtime="20220314 11:59:09.832"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:09.655" endtime="20220314 11:59:09.833"/>
+</kw>
+<kw name="Tambahkan nama list item priority very high" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputListName}</arg>
+<arg>List Priority Very High</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:09.836" level="INFO">Typing text 'List Priority Very High' into text field '//*[@data-cy="modal-add-name-input"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:09.835" endtime="20220314 11:59:10.227"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 11:59:13.230" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220314 11:59:10.227" endtime="20220314 11:59:13.230"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:09.834" endtime="20220314 11:59:13.231"/>
+</kw>
+<kw name="Pilih priority very high" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DropdownListPriority}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:13.234" level="INFO">Clicking element '//*[@data-cy="modal-add-priority-dropdown"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:13.233" endtime="20220314 11:59:13.404"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${VeryHighPriority}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:13.406" level="INFO">Clicking element '(//*[@data-cy="modal-add-priority-item"])[1]'.</msg>
+<status status="PASS" starttime="20220314 11:59:13.405" endtime="20220314 11:59:13.556"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:13.232" endtime="20220314 11:59:13.557"/>
+</kw>
+<kw name="Klik button simpan items" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnSaveItemList}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:13.560" endtime="20220314 11:59:13.659"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnSaveItemList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:13.661" level="INFO">Clicking element '//*[@data-cy="modal-add-save-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:13.660" endtime="20220314 11:59:13.794"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:13.559" endtime="20220314 11:59:13.795"/>
+</kw>
+<kw name="Klik button tambah items" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddListItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:13.800" level="INFO">Clicking element '//*[@data-cy="todo-add-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:13.798" endtime="20220314 11:59:13.991"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:13.796" endtime="20220314 11:59:13.992"/>
+</kw>
+<kw name="Tambahkan nama list item priority high" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${inputListName}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:13.995" endtime="20220314 11:59:14.057"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputListName}</arg>
+<arg>List Priority High</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:14.059" level="INFO">Typing text 'List Priority High' into text field '//*[@data-cy="modal-add-name-input"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:14.058" endtime="20220314 11:59:14.396"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:13.993" endtime="20220314 11:59:14.397"/>
+</kw>
+<kw name="Pilih priority high" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DropdownListPriority}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:14.402" level="INFO">Clicking element '//*[@data-cy="modal-add-priority-dropdown"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:14.401" endtime="20220314 11:59:14.534"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HighPriority}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:14.536" level="INFO">Clicking element '(//*[@data-cy="modal-add-priority-item"])[2]'.</msg>
+<status status="PASS" starttime="20220314 11:59:14.535" endtime="20220314 11:59:14.687"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:14.399" endtime="20220314 11:59:14.688"/>
+</kw>
+<kw name="Klik button simpan items" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnSaveItemList}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:14.691" endtime="20220314 11:59:14.749"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnSaveItemList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:14.751" level="INFO">Clicking element '//*[@data-cy="modal-add-save-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:14.750" endtime="20220314 11:59:14.881"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:14.689" endtime="20220314 11:59:14.882"/>
+</kw>
+<kw name="Klik button tambah items" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddListItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:14.885" level="INFO">Clicking element '//*[@data-cy="todo-add-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:14.884" endtime="20220314 11:59:15.001"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:14.883" endtime="20220314 11:59:15.002"/>
+</kw>
+<kw name="Tambahkan nama list item priority medium" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${inputListName}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:15.005" endtime="20220314 11:59:15.072"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputListName}</arg>
+<arg>List Priority Medium</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:15.074" level="INFO">Typing text 'List Priority Medium' into text field '//*[@data-cy="modal-add-name-input"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:15.072" endtime="20220314 11:59:15.408"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:15.003" endtime="20220314 11:59:15.409"/>
+</kw>
+<kw name="Pilih priority medium" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DropdownListPriority}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:15.414" level="INFO">Clicking element '//*[@data-cy="modal-add-priority-dropdown"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:15.413" endtime="20220314 11:59:15.547"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MediumPriority}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:15.550" level="INFO">Clicking element '(//*[@data-cy="modal-add-priority-item"])[3]'.</msg>
+<status status="PASS" starttime="20220314 11:59:15.548" endtime="20220314 11:59:15.700"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:15.411" endtime="20220314 11:59:15.700"/>
+</kw>
+<kw name="Klik button simpan items" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnSaveItemList}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:15.703" endtime="20220314 11:59:15.764"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnSaveItemList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:15.766" level="INFO">Clicking element '//*[@data-cy="modal-add-save-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:15.765" endtime="20220314 11:59:15.908"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:15.701" endtime="20220314 11:59:15.909"/>
+</kw>
+<kw name="Klik button tambah items" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddListItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:15.914" level="INFO">Clicking element '//*[@data-cy="todo-add-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:15.913" endtime="20220314 11:59:16.020"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:15.911" endtime="20220314 11:59:16.021"/>
+</kw>
+<kw name="Tambahkan nama list item priority low" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${inputListName}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:16.023" endtime="20220314 11:59:16.085"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputListName}</arg>
+<arg>List Priority Low</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:16.087" level="INFO">Typing text 'List Priority Low' into text field '//*[@data-cy="modal-add-name-input"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:16.086" endtime="20220314 11:59:16.409"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:16.022" endtime="20220314 11:59:16.410"/>
+</kw>
+<kw name="Pilih priority low" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DropdownListPriority}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:16.414" level="INFO">Clicking element '//*[@data-cy="modal-add-priority-dropdown"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:16.413" endtime="20220314 11:59:16.543"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LowPriority}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:16.545" level="INFO">Clicking element '(//*[@data-cy="modal-add-priority-item"])[4]'.</msg>
+<status status="PASS" starttime="20220314 11:59:16.543" endtime="20220314 11:59:16.693"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:16.411" endtime="20220314 11:59:16.694"/>
+</kw>
+<kw name="Klik button simpan items" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnSaveItemList}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:16.696" endtime="20220314 11:59:16.754"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnSaveItemList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:16.756" level="INFO">Clicking element '//*[@data-cy="modal-add-save-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:16.755" endtime="20220314 11:59:16.884"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:16.695" endtime="20220314 11:59:16.885"/>
+</kw>
+<kw name="Klik button tambah items" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddListItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:16.889" level="INFO">Clicking element '//*[@data-cy="todo-add-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:16.888" endtime="20220314 11:59:17.015"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:16.887" endtime="20220314 11:59:17.016"/>
+</kw>
+<kw name="Tambahkan nama list item priority very low" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${inputListName}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:17.018" endtime="20220314 11:59:17.079"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputListName}</arg>
+<arg>List Priority Very Low</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:17.081" level="INFO">Typing text 'List Priority Very Low' into text field '//*[@data-cy="modal-add-name-input"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:17.079" endtime="20220314 11:59:17.423"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:17.017" endtime="20220314 11:59:17.424"/>
+</kw>
+<kw name="Pilih priority very low" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DropdownListPriority}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:17.427" level="INFO">Clicking element '//*[@data-cy="modal-add-priority-dropdown"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:17.426" endtime="20220314 11:59:17.558"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${VeryLowPriority}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:17.560" level="INFO">Clicking element '(//*[@data-cy="modal-add-priority-item"])[5]'.</msg>
+<status status="PASS" starttime="20220314 11:59:17.559" endtime="20220314 11:59:17.708"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:17.425" endtime="20220314 11:59:17.709"/>
+</kw>
+<kw name="Klik button simpan items" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnSaveItemList}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:17.712" endtime="20220314 11:59:17.770"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnSaveItemList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:17.772" level="INFO">Clicking element '//*[@data-cy="modal-add-save-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:17.771" endtime="20220314 11:59:17.903"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:17.711" endtime="20220314 11:59:17.904"/>
+</kw>
+<doc>Test verifikasi menambahkan 5 list item priority</doc>
+<tag>Fungsional, Detail Card Acivity</tag>
+<status status="PASS" starttime="20220314 11:59:08.377" endtime="20220314 11:59:17.906"/>
+</test>
+<test id="s1-t7" name="Men-sortir item todo">
+<kw name="Buka halaman website todo list app" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://todo-4769a.web.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 11:59:17.914" level="INFO">Opening url 'https://todo-4769a.web.app/'</msg>
+<status status="PASS" starttime="20220314 11:59:17.914" endtime="20220314 11:59:18.097"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:17.912" endtime="20220314 11:59:18.098"/>
+</kw>
+<kw name="Berhsil menampilkan header title" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:59:18.165" level="INFO">Element '//*[@data-cy="header-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:59:18.101" endtime="20220314 11:59:18.166"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<arg>TO DO LIST APP</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:59:18.237" level="INFO">Element '//*[@data-cy="header-title"]' contains text 'TO DO LIST APP'.</msg>
+<status status="PASS" starttime="20220314 11:59:18.166" endtime="20220314 11:59:18.237"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:18.099" endtime="20220314 11:59:18.238"/>
+</kw>
+<kw name="Berhasil menampilkan title activity" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:59:18.300" level="INFO">Element '//*[@data-cy="activity-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:59:18.241" endtime="20220314 11:59:18.300"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<arg>Activity</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:59:18.496" level="INFO">Element '//*[@data-cy="activity-title"]' contains text 'Activity'.</msg>
+<status status="PASS" starttime="20220314 11:59:18.301" endtime="20220314 11:59:18.496"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:18.239" endtime="20220314 11:59:18.498"/>
+</kw>
+<kw name="Klik activity card yang sudah dibuat" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ActivityAction}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:18.501" endtime="20220314 11:59:18.561"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ActivityAction}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:18.563" level="INFO">Clicking element '(//*[@data-cy="activity-item"])[1]'.</msg>
+<status status="PASS" starttime="20220314 11:59:18.561" endtime="20220314 11:59:18.730"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:18.499" endtime="20220314 11:59:18.733"/>
+</kw>
+<kw name="Klik icon sortir dan menampilkan list sort" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnSortList}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:18.739" endtime="20220314 11:59:18.886"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnSortList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:18.888" level="INFO">Clicking element '//*[@data-cy="todo-sort-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:18.887" endtime="20220314 11:59:19.027"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:18.736" endtime="20220314 11:59:19.028"/>
+</kw>
+<kw name="Klik icon sortir dan menampilkan sort terlama" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnSortList}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:19.032" endtime="20220314 11:59:19.087"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SortTerlama}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:19.089" level="INFO">Clicking element '(//*[@data-cy="sort-selection"])[2]'.</msg>
+<status status="PASS" starttime="20220314 11:59:19.088" endtime="20220314 11:59:19.240"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:19.030" endtime="20220314 11:59:19.241"/>
+</kw>
+<kw name="Klik icon sortir dan menampilkan sort A-Z" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnSortList}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:19.245" endtime="20220314 11:59:19.300"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnSortList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:19.303" level="INFO">Clicking element '//*[@data-cy="todo-sort-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:19.301" endtime="20220314 11:59:19.388"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SortA_Z}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:19.391" level="INFO">Clicking element '(//*[@data-cy="sort-selection"])[3]'.</msg>
+<status status="PASS" starttime="20220314 11:59:19.389" endtime="20220314 11:59:19.542"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:19.243" endtime="20220314 11:59:19.542"/>
+</kw>
+<kw name="Klik icon sortir dan menampilkan sort Z-A" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnSortList}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:19.546" endtime="20220314 11:59:19.601"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnSortList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:19.603" level="INFO">Clicking element '//*[@data-cy="todo-sort-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:19.602" endtime="20220314 11:59:19.687"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SortZ_A}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:19.689" level="INFO">Clicking element '(//*[@data-cy="sort-selection"])[4]'.</msg>
+<status status="PASS" starttime="20220314 11:59:19.688" endtime="20220314 11:59:19.839"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:19.544" endtime="20220314 11:59:19.840"/>
+</kw>
+<doc>Test verifikasi mensortir item list todo</doc>
+<tag>Fungsional, Detail Card Acivity</tag>
+<status status="PASS" starttime="20220314 11:59:17.909" endtime="20220314 11:59:19.841"/>
+</test>
+<test id="s1-t8" name="Menandai selesai item todo">
+<kw name="Buka halaman website todo list app" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://todo-4769a.web.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 11:59:19.851" level="INFO">Opening url 'https://todo-4769a.web.app/'</msg>
+<status status="PASS" starttime="20220314 11:59:19.849" endtime="20220314 11:59:20.010"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:19.847" endtime="20220314 11:59:20.011"/>
+</kw>
+<kw name="Berhsil menampilkan header title" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:59:20.081" level="INFO">Element '//*[@data-cy="header-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:59:20.014" endtime="20220314 11:59:20.082"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<arg>TO DO LIST APP</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:59:20.275" level="INFO">Element '//*[@data-cy="header-title"]' contains text 'TO DO LIST APP'.</msg>
+<status status="PASS" starttime="20220314 11:59:20.083" endtime="20220314 11:59:20.276"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:20.012" endtime="20220314 11:59:20.276"/>
+</kw>
+<kw name="Berhasil menampilkan title activity" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:59:20.336" level="INFO">Element '//*[@data-cy="activity-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:59:20.279" endtime="20220314 11:59:20.337"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<arg>Activity</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:59:20.407" level="INFO">Element '//*[@data-cy="activity-title"]' contains text 'Activity'.</msg>
+<status status="PASS" starttime="20220314 11:59:20.337" endtime="20220314 11:59:20.407"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:20.278" endtime="20220314 11:59:20.408"/>
+</kw>
+<kw name="Klik activity card yang sudah dibuat" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ActivityAction}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:20.411" endtime="20220314 11:59:20.468"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ActivityAction}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:20.470" level="INFO">Clicking element '(//*[@data-cy="activity-item"])[1]'.</msg>
+<status status="PASS" starttime="20220314 11:59:20.468" endtime="20220314 11:59:20.600"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:20.409" endtime="20220314 11:59:20.601"/>
+</kw>
+<kw name="Checklist item todo yang sudah selesai" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TodoListSelesai}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:20.604" endtime="20220314 11:59:20.934"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TodoListSelesai}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:20.936" level="INFO">Clicking element '(//*[@data-cy="todo-item-checkbox"])[1]'.</msg>
+<status status="PASS" starttime="20220314 11:59:20.934" endtime="20220314 11:59:21.104"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:20.602" endtime="20220314 11:59:21.104"/>
+</kw>
+<kw name="Klik icon sortir belum selesai dan menampilkan list item belum selesai" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btnSortList}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:21.107" endtime="20220314 11:59:21.165"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnSortList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:21.167" level="INFO">Clicking element '//*[@data-cy="todo-sort-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:21.165" endtime="20220314 11:59:21.294"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SortBelumSelesai}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:21.297" level="INFO">Clicking element '(//*[@data-cy="sort-selection"])[5]'.</msg>
+<status status="PASS" starttime="20220314 11:59:21.295" endtime="20220314 11:59:21.453"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:21.106" endtime="20220314 11:59:21.454"/>
+</kw>
+<doc>Test verifikasi checklist list item todo yang sudah selesai</doc>
+<tag>Fungsional, Detail Card Acivity</tag>
+<status status="PASS" starttime="20220314 11:59:19.844" endtime="20220314 11:59:21.455"/>
+</test>
+<test id="s1-t9" name="Menghapus item todo">
+<kw name="Buka halaman website todo list app" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://todo-4769a.web.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220314 11:59:21.463" level="INFO">Opening url 'https://todo-4769a.web.app/'</msg>
+<status status="PASS" starttime="20220314 11:59:21.463" endtime="20220314 11:59:21.612"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:21.462" endtime="20220314 11:59:21.613"/>
+</kw>
+<kw name="Berhsil menampilkan header title" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:59:21.682" level="INFO">Element '//*[@data-cy="header-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:59:21.615" endtime="20220314 11:59:21.682"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${HeaderTitle}</arg>
+<arg>TO DO LIST APP</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:59:21.884" level="INFO">Element '//*[@data-cy="header-title"]' contains text 'TO DO LIST APP'.</msg>
+<status status="PASS" starttime="20220314 11:59:21.682" endtime="20220314 11:59:21.884"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:21.614" endtime="20220314 11:59:21.885"/>
+</kw>
+<kw name="Berhasil menampilkan title activity" library="resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:59:21.944" level="INFO">Element '//*[@data-cy="activity-title"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:59:21.887" endtime="20220314 11:59:21.944"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${TitleActivity}</arg>
+<arg>Activity</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220314 11:59:22.014" level="INFO">Element '//*[@data-cy="activity-title"]' contains text 'Activity'.</msg>
+<status status="PASS" starttime="20220314 11:59:21.945" endtime="20220314 11:59:22.014"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:21.886" endtime="20220314 11:59:22.015"/>
+</kw>
+<kw name="Klik activity card yang sudah dibuat" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ActivityAction}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:22.018" endtime="20220314 11:59:22.076"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ActivityAction}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:22.078" level="INFO">Clicking element '(//*[@data-cy="activity-item"])[1]'.</msg>
+<status status="PASS" starttime="20220314 11:59:22.077" endtime="20220314 11:59:22.242"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:22.016" endtime="20220314 11:59:22.243"/>
+</kw>
+<kw name=" Klik icon hapus item" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DeleteItemList}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:22.245" endtime="20220314 11:59:22.604"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DeleteItemList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:22.606" level="INFO">Clicking element '(//*[@data-cy="todo-item-delete-button"])[1]'.</msg>
+<status status="PASS" starttime="20220314 11:59:22.605" endtime="20220314 11:59:22.754"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:22.244" endtime="20220314 11:59:22.755"/>
+</kw>
+<kw name="Menmapilkan popup konfirmasi hapus data" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PopupDelete}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 11:59:22.758" endtime="20220314 11:59:22.835"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${PopupDelete}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220314 11:59:22.887" level="INFO">Element '//*[@data-cy="modal-delete-confirm-button"]' is displayed.</msg>
+<status status="PASS" starttime="20220314 11:59:22.835" endtime="20220314 11:59:22.887"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:22.756" endtime="20220314 11:59:22.888"/>
+</kw>
+<kw name="Klik tombol hapus" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BtnDelete}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 11:59:22.892" level="INFO">Clicking element '//*[@data-cy="modal-delete-confirm-button"]'.</msg>
+<status status="PASS" starttime="20220314 11:59:22.890" endtime="20220314 11:59:23.066"/>
+</kw>
+<status status="PASS" starttime="20220314 11:59:22.889" endtime="20220314 11:59:23.067"/>
+</kw>
+<doc>Test verifikasi menghapus list items todo</doc>
+<tag>Fungsional, Detail Card Acivity</tag>
+<status status="PASS" starttime="20220314 11:59:21.458" endtime="20220314 11:59:23.069"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220314 11:59:23.077" endtime="20220314 11:59:25.618"/>
+</kw>
+<doc>Dokumentasi teknikal sebagai test QA Engineer Skyshi</doc>
+<status status="FAIL" starttime="20220314 11:58:39.229" endtime="20220314 11:59:25.619"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">Fungsional, Card Acivity</stat>
+<stat pass="5" fail="1" skip="0">Fungsional, Detail Card Acivity</stat>
+</tag>
+<suite>
+<stat pass="8" fail="1" skip="0" id="s1" name="Todo List-App">Todo List-App</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
